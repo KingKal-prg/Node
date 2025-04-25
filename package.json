@@ -1,7 +1,7 @@
 {
-  "name": "surfdoge",
-  "version": "4.4.13",
-  "description": "",
+  "name": "Kelvin's Arcade",
+  "version": "1.0",
+  "description": "A wollyMam",
   "type": "module",
   "engines": {
     "npm": ">=7.0.0",
@@ -10,8 +10,8 @@
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [Kelvin's Arcade, 648k/Kelvin, School Unblocker, Proxy unblocker, Games, Brunysixlwork, school bypasser],
+  "author": "648k/Kelvin",
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@cypress/request": "^3.0.0",
