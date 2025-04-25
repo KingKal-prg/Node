@@ -15,7 +15,8 @@ const server = http.createServer();
 const bareServer = createBareServer('/seal/');
 const app = express(server);
 const version = packageJson.version;
-const discord = 'https://discord.gg/unblocking';
+const discord = 'https://discord.gg/';
+
 const routes = [
   { route: '/mastery', file: './static/loader.html' },
   { route: '/apps', file: './static/apps.html' },
@@ -26,12 +27,7 @@ const routes = [
 ];
 
 app.use(express.json());
-app.use(
-  express.urlencoded({
-    extended: true,
-  })
-);
-
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'static')));
 app.use("/uv/", express.static(uvPath));
 app.use("/epoxy/", express.static(epoxyPath));
@@ -78,9 +74,9 @@ server.on("upgrade", (req, socket, head) => {
 });
 
 server.on('listening', () => {
-  console.log(chalk.bgBlue.white.bold(`  Welcome to Doge V4, user!  `) + '\n');
+  console.log(chalk.bgBlue.white.bold(`  Welcome to Kelvin's Arcade, member!  `) + '\n');
   console.log(chalk.cyan('-----------------------------------------------'));
-  console.log(chalk.green('  🌟 Status: ') + chalk.bold('Active'));
+  console.log(chalk.green('  🎮 Status: ') + chalk.bold('Active'));
   console.log(chalk.green('  🌍 Port: ') + chalk.bold(chalk.yellow(server.address().port)));
   console.log(chalk.green('  🕒 Time: ') + chalk.bold(new Date().toLocaleTimeString()));
   console.log(chalk.cyan('-----------------------------------------------'));
@@ -104,7 +100,4 @@ function shutdown(signal) {
 process.on('SIGTERM', () => shutdown('SIGTERM'));
 process.on('SIGINT', () => shutdown('SIGINT'));
 
-
-server.listen({
-  port: 8001,
-});
+server.listen({ port: 8001 });
