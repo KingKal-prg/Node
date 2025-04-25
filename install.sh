@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Use the Bash function syntax (parentheses are allowed)
+# Print bold message with a border
 print_bold_with_outline() {
     local msg="$1"
     local length=${#msg}
@@ -21,40 +21,40 @@ YELLOW="\e[1;33m"
 BLUE="\e[1;34m"
 RESET="\e[0m"
 
-print_bold_with_outline "Welcome to Doge V4, user!"
+print_bold_with_outline "Welcome to Kelvin's Arcade, member!"
 
 if ! command -v git > /dev/null; then
     echo -e "${RED}[Error] Git is not installed. Please install Git and try again.${RESET}"
     exit 1
 fi
 
-echo -e "${BLUE}[1/4] Cloning Doge Unblocker repository...${RESET}"
+echo -e "${BLUE}[1/4] Fetching the Kelvin's Arcade files...${RESET}"
 if git clone https://github.com/DogeNetwork/v4 > /dev/null 2>&1; then
-    echo -e "${GREEN}[Success] Repository cloned successfully.${RESET}"
+    echo -e "${GREEN}[Success] Files downloaded successfully.${RESET}"
 else
-    echo -e "${RED}[Error] Failed to clone repository. Please check your network connection, or see if the v4 folder already exists.${RESET}"
+    echo -e "${RED}[Error] Couldn't download the files. Check your internet connection or make sure the folder doesn't already exist.${RESET}"
     exit 1
 fi
 
-cd v4 || { echo -e "${RED}[Error] Failed to enter the project directory.${RESET}"; exit 1; }
+cd v4 || { echo -e "${RED}[Error] Unable to enter the Kelvin's Arcade folder.${RESET}"; exit 1; }
 
-echo -e "${BLUE}[2/4] Installing dependencies (this may take a moment)...${RESET}"
+echo -e "${BLUE}[2/4] Installing required packages...${RESET}"
 if npm install --progress=false > /dev/null 2>&1; then
-    echo -e "${GREEN}[Success] Dependencies installed successfully.${RESET}"
+    echo -e "${GREEN}[Success] All dependencies installed.${RESET}"
 else
-    echo -e "${RED}[Error] Failed to install dependencies. Please check for npm errors.${RESET}"
+    echo -e "${RED}[Error] Something went wrong while installing dependencies.${RESET}"
     exit 1
 fi
 
-echo -e "${BLUE}[3/4] Starting Doge Unblocker...${RESET}"
+echo -e "${BLUE}[3/4] Launching Kelvin's Arcade...${RESET}"
 npm start
 
 if [ $? -eq 0 ]; then
-    echo -e "${GREEN}[Success] Doge Unblocker started successfully.${RESET}"
-    echo -e "${YELLOW}[Info] You can access Doge V4 via localhost.${RESET}"
+    echo -e "${GREEN}[Success] Kelvin's Arcade is now running.${RESET}"
+    echo -e "${YELLOW}[Info] Access the Arcade at http://localhost in your browser.${RESET}"
 else
-    echo -e "${RED}[Error] Failed to start Doge Unblocker. Please check the application logs for details.${RESET}"
+    echo -e "${RED}[Error] Failed to start Kelvin's Arcade. Please check the logs for more info.${RESET}"
     exit 1
 fi
 
-echo -e "${BLUE}[4/4] Installation Complete.${RESET}"
+echo -e "${BLUE}[4/4] Setup Complete. Enjoy your experience!${RESET}"
