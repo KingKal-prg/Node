@@ -1,6 +1,6 @@
 {
-  "name": "Kelvin's Arcade",
-  "version": "1.0",
+  "name": "kelvins-arcade",
+  "version": "1.0.0",
   "description": "A wollyMam",
   "type": "module",
   "engines": {
@@ -10,7 +10,15 @@
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": [Kelvin's Arcade, 648k/Kelvin, School Unblocker, Proxy unblocker, Games, Brunysixlwork, school bypasser],
+  "keywords": [
+    "Kelvin's Arcade",
+    "648k/Kelvin",
+    "School Unblocker",
+    "Proxy unblocker",
+    "Games",
+    "Brunysixlwork",
+    "school bypasser"
+  ],
   "author": "648k/Kelvin",
   "license": "GPL-3.0-or-later",
   "dependencies": {
